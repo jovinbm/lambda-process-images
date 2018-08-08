@@ -19,9 +19,8 @@ export interface ILambdaProcessImagesEvent {
 export interface ILambdaProcessImagesSuccessPayload {
   error_message?: string
   data?: {
-    [key: string]: {
-      [key: string]: string
-    }
+    // e.g. 80: 'images/140619_5872_aspR_1.5_w4898_h3265_e80.jpg'
+    [key: string]: string
   }
 }
 
@@ -77,18 +76,16 @@ export const handler = async (event: ILambdaProcessImagesEvent, context: {
     });
 
     console.log('Processing files.');
-    const processing_results = await processImages({
+    const processing_results = (await processImages({
       absolute_directory_path: folder_input,
       absolute_output_directory_path: folder_output,
       versions: event.versions,
-    });
+    }))[path.basename(event.key)];
 
     // processImages only returns the new file names. We want this result to contain
     // the full key of where the image lives in s3
-    Object.keys(processing_results).map(original_file_name => {
-      Object.keys(processing_results[original_file_name]).map(version_height => {
-        processing_results[original_file_name][version_height] = path.join(event.output_directory, processing_results[original_file_name][version_height]);
-      });
+    Object.keys(processing_results).map(version_height => {
+      processing_results[version_height] = path.join(event.output_directory, processing_results[version_height]);
     });
 
     console.log('Uploading processed files back to S3.');
