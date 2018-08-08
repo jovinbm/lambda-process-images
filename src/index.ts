@@ -83,6 +83,14 @@ export const handler = async (event: ILambdaProcessImagesEvent, context: {
       versions: event.versions,
     });
 
+    // processImages only returns the new file names. We want this result to contain
+    // the full key of where the image lives in s3
+    Object.keys(processing_results).map(original_file_name => {
+      Object.keys(processing_results[original_file_name]).map(version_height => {
+        processing_results[original_file_name][version_height] = path.join(event.output_directory, processing_results[original_file_name][version_height]);
+      });
+    });
+
     console.log('Uploading processed files back to S3.');
     const uploadPromises: Promise<any>[] = [];
     await new Promise((resolve, reject) => {
@@ -108,6 +116,7 @@ export const handler = async (event: ILambdaProcessImagesEvent, context: {
               }),
             );
           });
+          resolve();
         }
       });
     });
