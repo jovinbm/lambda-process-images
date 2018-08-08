@@ -1,0 +1,32 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
+  "jsRules": {},
+  "rules": {
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false,
+    "import-name": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "named-imports-order": "case-insensitive"
+      }
+    ],
+    "object-shorthand-properties-first": false,
+    "array-type": false,
+    "no-else-after-return": false,
+    "no-empty-interface": false,
+    "no-namespace": false,
+    "no-this-assignment": false,
+    "max-classes-per-file": false,
+    "variable-name": false,
+    "no-increment-decrement": false,
+    "no-console": false
+  },
+  "rulesDirectory": []
+}
