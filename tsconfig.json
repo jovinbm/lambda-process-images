@@ -1,36 +1,40 @@
 {
   "compilerOptions": {
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "checkJs": false,
-    "declaration": true,
     "downlevelIteration": true,
-    "lib": [
-      "es6",
-      "dom",
-      "esnext"
-    ],
+    "esModuleInterop": true,
+    "lib": ["es6", "dom", "esnext"],
     "module": "commonjs",
     "moduleResolution": "node",
+    "noEmit": false,
     "noEmitOnError": true,
     "noErrorTruncation": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "outDir": "./dist",
+    "noUnusedParameters": true,
     "pretty": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
+    "strict": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "strictNullChecks": true,
-    "target": "es2016"
+    "skipLibCheck": true,
+    "target": "es2017",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "composite": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/tsbuild-info",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./dist/declarations"
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

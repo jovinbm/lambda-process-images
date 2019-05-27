@@ -1,6 +1,6 @@
 {
   "name": "@jovinbm/lambda-process-images",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "lambda-process-images",
   "author": "Jovin Mwilanga <jovinbeda@hotmail.com>",
   "private": false,
@@ -19,17 +19,17 @@
     "tests": "ts-node src/tests/index.ts"
   },
   "dependencies": {
-    "@jovinbm/process-images": "^1.0.2",
-    "aws-sdk": "^2.288.0",
+    "@jovinbm/process-images": "^2.0.2",
+    "aws-sdk": "^2.463.0",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
     "@types/mkdirp": "^0.5.2",
-    "prettier": "^1.14.0",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.11.0",
-    "tslint-config-airbnb": "^5.9.2",
-    "tslint-config-prettier": "^1.14.0",
-    "typescript": "^3.0.1"
+    "prettier": "^1.17.1",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5"
   }
 }

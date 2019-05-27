@@ -1,8 +1,8 @@
 import { IVersion, processImages } from '@jovinbm/process-images';
 import * as aws from 'aws-sdk';
-import * as fs from 'fs';
-import * as mkdirp from 'mkdirp';
-import * as path from 'path';
+import fs from 'fs';
+import mkdirp from 'mkdirp';
+import path from 'path';
 
 const S3 = new aws.S3();
 
