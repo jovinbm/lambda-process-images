@@ -1,6 +1,6 @@
 {
   "name": "@jovinbm/lambda-process-images",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "lambda-process-images",
   "author": "Jovin Mwilanga <jovinbeda@hotmail.com>",
   "private": false,
@@ -10,7 +10,7 @@
     "npm": "6.7.0"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/declarations/index.d.ts",
   "scripts": {
     "test": "ts-node src/tests/index.ts",
     "type-check": "tsc --noEmit",
