@@ -1,6 +1,6 @@
 {
   "name": "@jovinbm/lambda-process-images",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "lambda-process-images",
   "author": "Jovin Mwilanga <jovinbeda@hotmail.com>",
   "private": false,
@@ -22,10 +22,12 @@
   "dependencies": {
     "@jovinbm/process-images": "^2.0.3",
     "aws-sdk": "^2.463.0",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@types/mkdirp": "^0.5.2",
+    "@types/uuid": "^3.4.4",
     "prettier": "^1.17.1",
     "ts-node": "^8.2.0",
     "tslint": "^5.16.0",
